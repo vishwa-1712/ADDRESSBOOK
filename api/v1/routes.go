@@ -16,6 +16,7 @@ func SetupRoutes(router *gin.Engine, contactHandler *handlers.ContactHandler) {
 	// })
 
 	v1 := router.Group("/api/v1")
+	v1.POST("/login", handlers.Signup)
 	{
 		v1.POST("/contact", contactHandler.CreateContact)
 		v1.GET("/contact/:id", contactHandler.GetContactByID)

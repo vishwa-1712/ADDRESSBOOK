@@ -33,4 +33,10 @@ func LoadConfig() *Config {
 		DBSSLMode:  os.Getenv("DB_SSLMODE"),
 	}
 	return config
+
+}
+
+// FOR JWT PURPOSE
+func GetEnv(key string) string {
+	return os.Getenv(key)
 }
